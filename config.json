@@ -1,0 +1,9 @@
+{
+    "config" : {
+        "token": "XXX",
+        "url": "http://gitlab",
+        "id": "1",
+        "size": "7",
+        "port": "8003"
+    }
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{title}</title>
+        <style>
+            html, body, div, table, tr {
+                margin: 0;
+                padding:0;
+                width: 100%;
+                background-color: #161615;
+                color: #fff6df;
+                font-size: x-large;
+            }
+
+            table {
+                margin-top: 0.2em;
+                table-layout: fixed;
+                border-spacing: 4px;
+            }
+
+            .pip-td-generated {
+                color: #161615;
+                font-size: x-large;
+                font-weight: normal;
+            }
+
+            .pip-td {
+                height: 62px;
+                text-align: center;
+            }
+
+            .pip-id {
+                width: 3em;
+                color: #f8961e;
+            }
+
+            .pip-ref {
+                text-align: left;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                width: 11em;
+            }
+
+            .pip-failed {
+                background-color: #dc3545;
+            }
+
+            .pip-pending, .pip-started, .pip-build, .pip-running {
+                background-color: #007bff;
+            }
+
+            .pip-skipped, .pip-canceled {
+                background-color: #6c757d;
+            }
+
+            .pip-success {
+                background-color: #28a745;
+            }
+
+            .pip-created {
+                background-color: #f8961e;
+            }
+
+        </style>
+    </head>
+    <body onLoad="timeRefresh(15000);">
+        <script>
+          function timeRefresh(time) {
+            setTimeout("location.reload(true);", time);
+          }
+        </script>
+        <table>
+            <tbody>
+                {table}
+            </tbody>
+        </table>
+    </body>
+</html>
