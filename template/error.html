@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>error</title>
+        <style>
+            html, body, div, table, tr {
+                margin: 0;
+                padding:0;
+                margin-top: 2em;
+                text-align: center;
+                width: 100%;
+                background-color: #161615;
+                color: #fff6df;
+                font-size: x-large;
+            }
+        </style>
+    </head>
+    <body onLoad="timeRefresh(15000);">
+        Error while generating data
+        <script>
+          function timeRefresh(time) {
+            setTimeout("location.reload(true);", time);
+          }
+        </script>
+    </body>
+</html>

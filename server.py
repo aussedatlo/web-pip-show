@@ -239,7 +239,7 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             self.send_header_nok(404)
         except Exception as e:
             print(e)
-            main = "500 error"
+            main = get_template("error")
             self.send_header_nok(500)
 
         self.wfile.write(main.encode("utf-8"))
