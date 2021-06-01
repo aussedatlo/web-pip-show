@@ -27,7 +27,7 @@ try:
     CONFIG = json.loads(f.read())["config"]
     TOKEN = CONFIG["token"]
     GITLAB_PIP_URL = CONFIG["url"] + "/api/v4/projects/" + CONFIG["id"] + "/pipelines"
-    GITLAB_PIP_JOB_URL = GITLAB_PIP_URL + "/:pipeline_id/jobs"
+    GITLAB_PIP_JOB_URL = GITLAB_PIP_URL + "/:pipeline_id/jobs?per_page=40"
     GITLAB_JOB_URL = CONFIG["url"] + "/api/v4/projects/" + CONFIG["id"] + "/jobs"
     SIZE = int(CONFIG["size"])
     PORT = int(CONFIG["port"])
