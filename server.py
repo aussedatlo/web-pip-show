@@ -118,7 +118,7 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         """
         stage_list = collections.OrderedDict()
         jobs = get_pipeline_job_list(pip_id)
-        for job in jobs:
+        for job in reversed(jobs):
 
             stage = job["stage"]
             status = job["status"]
